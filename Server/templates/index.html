@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apples-to-Apples Game</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>EAAI 25: Apples-to-Apples Game Console</h1>
+      <P style="text-align: center;"><input type="checkbox" id="autoadvance" name="autoadvance" value="Y" onclick="toggle_autoadvance()" checked>
+<label for="autoadvance">Automatically advance through round</label> <label for="delay">Delay (s):</label>
+<input type="number" id="delay" name="delay" min="1" max="120" value="6" />
+      </P>
+    
+    <div class="controls">
+      <button id="start-game" onclick="start_game()">Restart Game</button>
+      <button id="play-round" onclick="play_round()">Play round</button>
+      <button id="judge-round" onclick="judge_round()" disabled>Judge round</button>
+      <button id="end-round" onclick="end_round()" disabled>Complete round</button>
+      <button id="clear-log" onclick="clear_log()">Clear log</button>
+    </div>
+  
+    <div id="statusDiv" class="game-status">
+      <p>Once at least 3 players have joined, you can start the game.</p>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
